@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
@@ -12,17 +13,25 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!-- font icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!-- css file -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+     <!-- AI Doctor Button -->
+     <button id="ai-doctor-btn" class="ai-doctor-btn" onclick="window.open('chatbot/index1.html','_blank')">
+        <i class="bi bi-robot"></i> AI Doctor
+    </button>
+
+    
+    
     <!-- nav bar -->
     <section class="sticky-top">
 
         <nav class="navbar navbar-expand-lg bg-light ">
             <div class="container">
-                <img src="images/download.webp" alt="" class="img-fluid  ">
+                <img src="images/LOGO.png" alt="logo of company" class="img-fluid logo-size">
                 <button class="navbar-toggler bg-primary border-0 " type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -84,15 +93,20 @@
     <!-- end nav bar -->
     <!-- home -->
     <section class="home" id="Home">
+        <!-- YouTube Video Background -->
+        <div class="video-background">
+            <video autoplay muted loop id="bg-video">
+                <source src="images/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
         <div class="home1 d-flex align-items-center">
             <div class="container mt-5 pt-5">
                 <div class="home2 row ">
                     <div class="col-lg-12 mt-5 text-light">
                         <h1 class="fw-500">We Care for Your Health Every Moment</h1>
-                        <p class="mt-3 mb-5">If you are looking at blank cassettes on the web, you may be very confused
-                            at the difference
-                            in price You may see some
-                            for as low as each.</p>
+                        <p class="mt-3 mb-5">"Providing Comprehensive and Compassionate Healthcare Solutions for Your Entire Family's Well-Being."
+                            </p>
                         <a class="main_btn mr-10 text-decoration-none border-info rounded-1 pt-3 pb-3  ps-4 pe-4"
                             href="#">Get Started</a>
                     </div>
@@ -103,39 +117,104 @@
     <!-- end home -->
     <!-- Category -->
     <section class="category section_gap" id="Department">
-        <div class="container">
-            <div class="row justify-content-center section-title-wrap text-center pt-5 pb-5">
-                <div class="c1 col-lg-12 pt-5 pb-5">
-                    <h1 class="pb-3 fw-normal">Procedure Category</h1>
-                    <p class="">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
-                    </p>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Left Side Containers -->
+                <div class="col-lg-3 bg-light p-4">
+                    <!-- Doctors Container -->
+                    <div class="doctors-container mb-4 text-center">
+                        <a href="#" class="text-decoration-none">
+                            <div class="card p-4 bg-primary text-white">
+                                <h3>Doctors</h3>
+                                <p>Find the best doctors for your health needs.</p>
+                            </div>
+                        </a>
+                    </div>
+        
+                    <!-- Hospitals Container -->
+                    <div class="hospitals-container text-center">
+                        <a href="#" class="text-decoration-none">
+                            <div class="card p-4 bg-success text-white">
+                                <h3>Hospitals</h3>
+                                <p>Explore our state-of-the-art hospitals.</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
+        
+               
+         <!-- Right Side Content -->
+         <div class="col-lg-9 p-4">
+            <h1>Our Patient's Stories</h1>
+            <p>Follow your path to help. Make sure you know for patient outcomes that you can receive yourself quickly.</p>
+
+            <!-- Patient Stories Carousel -->
+            <div id="patientStoriesCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="card p-4">
+                            <p>"The outcome is extremely positive. I received great care and support throughout my treatment."</p>
+                            <h5>John Doe</h5>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="card p-4">
+                            <p>"The hospital staff was very supportive. I felt at ease during my entire stay."</p>
+                            <h5>Jane Smith</h5>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <div class="card p-4">
+                            <p>"Affordable and complete advice. I highly recommend this hospital for anyone in need."</p>
+                            <h5>Emily Brown</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#patientStoriesCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#patientStoriesCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
+        </div>
+    </div>
+</div>
             <div class="row">
                 <div class="post1 col-lg-4 mt-3 mb-3">
                     <div class="post">
+                        <h3 class="text-center mb-3">Clinical Laboratory Tests</h3>
                         <img src="images/xp1.jpg.pagespeed.ic.H2iNAI0AS3.webp" alt="Procedure"
                             class="img img-fluid  w-100">
-                        <div class="c2">
-                            <div class="c3">
+                        <div class="c2"><!-- when we move arrow to the three photo the box -->
+                            <div class="c3"><!--create a box in the in which there is text -->
                                 <div class="text-light">
                                     <hr>
                                 </div>
                                 <a href="#" class="text-decoration-none">
-                                    <h5>Emergency Treatment</h5>
+                                    <h5>Clinical laboratory tests</h5>
                                 </a>
                                 <div class="text-light">
                                     <hr>
                                 </div>
+                                <p class="text-light"> We offer a wide range of diagnostic tests to help you understand your health better.</p>
+                                <button class="btn btn-light">book appointment</button><br><br>
+                                <button class="btn btn-light">your report</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="post1 col-lg-4 mt-3 mb-3">
                     <div class="post">
-                        <img src="images/xp2.jpg.pagespeed.ic.NTVDNHoEHM.webp" alt="Procedure"
+                        <h3 class="text-center mb-3">Vision Health Check</h3>
+                        <img src="images/eye.jpg" alt="Procedure"
                             class="img img-fluid  w-100">
                         <div class="c2">
                             <div class="c3">
@@ -143,18 +222,21 @@
                                     <hr>
                                 </div>
                                 <a href="#" class="text-decoration-none">
-                                    <h5>Emergency Treatment</h5>
+                                    <h5>Vision Health Check</h5>
                                 </a>
                                 <div class="text-light">
                                     <hr>
                                 </div>
-
+                                <p class="text-light">Protect your eyesight; make eye tests a priority in your healthcare routine.</p>
+                                <button class="btn btn-light">book appointment</button><br><br>
+                                <button class="btn btn-light">your report</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="post1 col-lg-4 mt-3 mb-3">
                     <div class="post">
+                        <h3 class="text-center mb-3">Dermatological Skin Exam</h3>
                         <img src="images/xp3.jpg.pagespeed.ic.QlSGq7ZihA.webp" alt="Procedure" class=" img img-fluid">
                         <div class="c2">
                             <div class="c3">
@@ -162,11 +244,14 @@
                                     <hr>
                                 </div>
                                 <a href="#" class="text-decoration-none">
-                                    <h5>Emergency Treatment</h5>
+                                    <h5>Dermatological Skin Exam</h5>
                                 </a>
                                 <div class="text-light">
                                     <hr>
                                 </div>
+                                <p class="text-light">Skin health should be a top priority. Don't ignore what your skin is telling you</p>
+                                <button class="btn btn-light">book appointment</button><br><br>
+                                <button class="btn btn-light">your report</button>
                             </div>
                         </div>
                     </div>
@@ -589,6 +674,7 @@
         </div>
         
     </footer>
+    
     <!-- end footer -->
 
 
